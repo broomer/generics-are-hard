@@ -23,11 +23,13 @@ public class CuriouslyRecurringPatternSolution {
         Student s5 = new StudentBuilder<>().withType("Human").withName("Paul").withYear(1).build();
         Student s6 = new StudentBuilder<>().withYear(1).withType("Human").withName("Paul").build();
 
-        //wild guess...
-        Student build = new StudentBuilder<FinalBuilder>().withYear(1).withType("Human").withName("Paul").build();
 
         //However I still did not find out what is the StudentBuilder parametrized with. IntelliJ is of no help
 //        StudentBuilder<SELF> selfStudentBuilder = new StudentBuilder<>();//????
+
+        //vom: wild guess...
+        Student build = new FinalBuilder().withYear(1).withType("Human").withName("Paul").build();
+
     }
 
     // vom: perhaps that what it is parametrized with?
